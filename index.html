@@ -1,158 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Booking Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: white;
-            color: black;
-        }
-        h1, h3, h4 {
-            text-align: center;
-            color: darkgreen;
-        }
-        form {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            border: 2px solid darkgreen;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group b, label {
-            display: block;
-            margin-bottom: 5px;
-            color: black;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid darkgreen;
-        }
-        textarea {
-            resize: vertical;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .row > div {
-            flex: 1;
-            min-width: 200px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table td, table th {
-            border: 1px solid black;
-            padding: 8px;
-        }
-        th {
-            background-color: darkgreen;
-            color: white;
-        }
-        td:first-child {
-            font-weight: bold;
-        }
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            font-weight: bold;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        button[type="submit"] {
-            background-color: red;
-            color: white;
-        }
-        button[type="reset"] {
-            background-color: green;
-            color: white;
-        }
-        pre {
-            background-color: #f4f4f4;
-            border-left: 5px solid darkgreen;
-            padding: 10px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: white;
+      color: black;
+    }
+
+    h1, h3, h4 {
+      text-align: center;
+      color: darkgreen;
+    }
+
+    form {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      border: 2px solid darkgreen;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group b, label {
+      display: block;
+      margin-bottom: 5px;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid darkgreen;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .row-2, .row-3 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .row-2 > .form-group {
+      flex: 1 1 calc(50% - 10px);
+      min-width: 250px;
+    }
+
+    .row-3 > .form-group {
+      flex: 1 1 calc(33.33% - 13.33px);
+      min-width: 200px;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table td, table th {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    th {
+      background-color: darkgreen;
+      color: white;
+    }
+
+    td:first-child {
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    button[type="submit"] {
+      background-color: red;
+      color: white;
+    }
+
+    button[type="reset"] {
+      background-color: green;
+      color: white;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      border-left: 5px solid darkgreen;
+      padding: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
 </head>
 <body>
 
-    <h1 style="display: inline-block; width: 80%;">DELEGATE REGISTRATION / BOOKING FORM</h1>
-    <img src="caiss.jpeg" alt="CAISS Logo" width="100px" height="100px">
+  <h1 style="display: inline-block; width: 80%;">DELEGATE REGISTRATION / BOOKING FORM</h1>
+  <img src="caiss.jpeg" alt="CAISS Logo" width="100px" height="100px">
+
+  <h3>A. Personal Information (Please fill one form per person)</h3>
+
+  <form method="post" action="https://formsubmit.co/rajenburney@gmail.com">
     
-    <h3>A. Personal Information (Please fill one form per person)</h3>
+    <!-- Name - full width -->
+    <div class="form-group full-width">
+      <label for="name"><b>Name:</b></label>
+      <input type="text" id="name" name="Name" placeholder="Name in Full (Block Capitals)" required style="text-transform: uppercase;" autocomplete="name">
+    </div>
 
-    <form method="post" action="https://formsubmit.co/rajenburney@gmail.com">
-        <div class="form-group">
-            <label for="name"><b>Name:</b></label>
-            <input type="text" id="name" name="Name" placeholder="Name in Full (Block Capitals)" required tabindex="1" style="text-transform: uppercase;" autocomplete="name">
-        </div>
+    <!-- Address - full width -->
+    <div class="form-group full-width">
+      <label for="address"><b>Residential Address:</b></label>
+      <textarea id="address" name="Address" rows="5" maxlength="150" placeholder="Your Address" required></textarea>
+    </div>
 
-        <div class="form-group">
-            <label for="address"><b>Residential Address:</b></label>
-            <textarea id="address" name="Address" rows="5" maxlength="150" placeholder="Your Address" required></textarea>
-        </div>
+    <!-- City, Pin, Country - 3 in a row -->
+    <div class="row-3">
+      <div class="form-group">
+        <label for="city"><b>City/Town:</b></label>
+        <input type="text" id="city" name="City" placeholder="City" required>
+      </div>
+      <div class="form-group">
+        <label for="pin"><b>Pin Code:</b></label>
+        <input type="number" id="pin" name="pincode" placeholder="PIN CODE" required>
+      </div>
+      <div class="form-group">
+        <label for="country"><b>Country:</b></label>
+        <input type="text" id="country" name="Country" placeholder="Country" required>
+      </div>
+    </div>
 
-        <div class="row">
-            <div class="form-group">
-                <label for="city"><b>City/Town:</b></label>
-                <input type="text" id="city" name="City" placeholder="City" required>
-            </div>
-            <div class="form-group">
-                <label for="pin"><b>Pin Code:</b></label>
-                <input type="number" id="pin" name="pincode" placeholder="PIN CODE" required>
-            </div>
-            <div class="form-group">
-                <label for="country"><b>Country:</b></label>
-                <input type="text" id="country" name="Country" placeholder="Country" required>
-            </div>
-        </div>
+    <!-- Nationality, Passport - 2 in a row -->
+    <div class="row-2">
+      <div class="form-group">
+        <label for="nationality"><b>Nationality:</b></label>
+        <input type="text" id="nationality" name="Nationality" required>
+      </div>
+      <div class="form-group">
+        <label for="passport"><b>Passport No.:</b></label>
+        <input type="text" id="passport" name="Passport">
+      </div>
+    </div>
 
-        <div class="row">
-            <div class="form-group">
-                <label for="nationality"><b>Nationality:</b></label>
-                <input type="text" id="nationality" name="Nationality" required>
-            </div>
-            <div class="form-group">
-                <label for="passport"><b>Passport No.:</b></label>
-                <input type="text" id="passport" name="Passport">
-            </div>
-        </div>
+    <!-- Email, Mobile - 2 in a row -->
+    <div class="row-2">
+      <div class="form-group">
+        <label for="email"><b>E-mail ID:</b></label>
+        <input type="email" id="email" name="Email" placeholder="Email-id" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="mobile"><b>Mobile No. (WhatsApp No.):</b></label>
+        <input type="tel" id="mobile" name="Mobile" required autocomplete="tel">
+      </div>
+    </div>
 
-        <div class="row">
-            <div class="form-group">
-                <label for="email"><b>E-mail ID:</b></label>
-                <input type="email" id="email" name="Email" placeholder="Email-id" autocomplete="email">
-            </div>
-            <div class="form-group">
-                <label for="mobile"><b>Mobile No. (WhatsApp No.):</b></label>
-                <input type="tel" id="mobile" name="Mobile" required autocomplete="tel">
-            </div>
-        </div>
+    <!-- Alt Mobile - single on its own row -->
+    <div class="form-group full-width">
+      <label for="altmobile"><b>Alternate Contact No.:</b></label>
+      <input type="tel" id="altmobile" name="AltMobile">
+    </div>
 
-        <div class="form-group">
-            <label for="altmobile"><b>Alternate Contact No.:</b></label>
-            <input type="tel" id="altmobile" name="AltMobile">
-        </div>
-
-        <br/><br/>
+    <br/><br/>
         <h3>B. Delegate Event Fee</h3>
 
         <table>
@@ -213,7 +245,7 @@
         <h3>C. Details of Payment of Delegate Fee:</h3>
         <h4 style="color: red;">As per the Bank Transfer Advice / Demand Draft / Pay Order</h4>
 
-        <div class="row">
+        <div class="row-2">
             <div class="form-group">
                 <label for="paid"><b>Total Amount Paid/Transferred:</b></label>
                 <input type="number" id="paid" name="Paid">
