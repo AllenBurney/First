@@ -186,58 +186,116 @@
 
     <div class="form-group full-width">
         <label><b>Nationality Type:</b></label>
-        <input type="radio" id="indian" name="NatType" value="Indian" required>Indian
-        <input type="radio" id="international" name="NatType" value="International" style="margin-left: 20px;">International
+        <input type="radio" name="NatType" value="Indian" onclick="show('Indian')">Indian
+        <input type="radio" name="NatType" value="International" style="margin-left: 20px;" onclick="show('Inter')">International
     </div>
 
     <br/>
         <h3>B. Delegate Event Fee</h3>
 
-        <table>
+        <table style="font-weight: bold;">
             <tr><td colspan="8" style="text-align: center; font-weight: bold; background-color: red; color: white;">EVENT RATES & PACKAGES</td></tr>
             <tr>
                 <th>Date</th>
-                <th>Delegate Fee</th>
+                <th>Delegate Package</th>
                 <th colspan="2">Individual Event</th>
                 <th colspan="2">All Event Packages</th>
                 <th colspan="2">Early Bird Package</th>
             </tr>
             <tr>
-                <td></td><td></td><td>International</td><td>Indian</td><td>International</td><td>Indian</td><td>International</td><td>Indian</td>
+                <td></td>
+                <td>Delegate</td>
+                <td>International</td>
+                <td>Indian</td>
+                <td>International</td>
+                <td>Indian</td>
+                <td>International</td>
+                <td>Indian</td>
             </tr>
             <tr>
                 <td rowspan="2">January 22, 2026 Thursday</td>
-                <td>Ecumenical Service</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td>Ecumenical Service</td>
+                <td></td>
+                <td></td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
             </tr>
             <tr>
-                <td>Meet & Greet</td><td>$75</td><td></td><td>$50</td><td></td><td>$50</td><td></td>
+                <td>Meet & Greet</td>
+                <td>$80</td>
+                <td>3000</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
             </tr>
             <tr>
                 <td rowspan="2">January 23, 2026 Friday</td>
-                <td>Panel Discussion</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td>Panel Discussion</td>
+                <td></td>
+                <td></td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
             </tr>
             <tr>
-                <td>Bornfire Night</td><td>$75</td><td></td><td>$75</td><td></td><td>$50</td><td></td>
+                <td>Bornfire Night</td>
+                <td>$100</td>
+                <td>3500</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
             </tr>
             <tr>
                 <td>January 24, 2026 Saturday</td>
-                <td>Jubilee Ball</td><td>$150</td><td></td><td>$125</td><td></td><td>$100</td><td></td>
+                <td>Jubilee Ball</td>
+                <td>$175</td>
+                <td>7500</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
             </tr>
             <tr>
                 <td>January 25, 2026 Sunday</td>
-                <td>Carnival & Food Festival</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td>Carnival & Food Festival</td>
+                <td></td>
+                <td></td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
             </tr>
-            <tr>
-                <td colspan="2">Total Early Bird Package</td>
-                <td></td><td></td><td></td><td></td><td>$200</td><td></td>
+            <tr bgcolor="black">
+                <td colspan="2" bgcolor="white">Total Early Bird Package</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td bgcolor="white">$250</td>
+                <td bgcolor="white">9500</td>
             </tr>
-            <tr>
-                <td colspan="2">Total All Event Package</td>
-                <td></td><td></td><td>$250</td><td></td><td></td><td></td>
+            <tr bgcolor="black">
+                <td colspan="2" bgcolor="white">Total All Event Package</td>
+                <td></td>
+                <td></td>
+                <td bgcolor="white">$250</td>
+                <td bgcolor="white">11500</td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
-                <td colspan="2">Total Individual Events</td>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
+            <tr bgcolor="black">
+                <td colspan="2" bgcolor="white">Total Individual Events</td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
 
